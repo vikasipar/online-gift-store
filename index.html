@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      color: maroon;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    .logo {
+      padding: 0 0 0 20px;
+    }
+
+    #cart {
+      padding: 9px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #EC0ED9;
+      position: sticky;
+      top: 0;
+    }
+
+    li {
+      float: left;
+      border-right: 1px solid white;
+    }
+
+    li:last-child {
+      border-right: none;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #FF0090;
+    }
+
+    .active {}
+
+    .slide {
+      width: 1400px;
+    }
+
+    .slider {
+      text-align: center;
+      border: 1px dashed #FF0090;
+      border-left: none;
+      border-right: none;
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 100px;
+      position: relative;
+      margin: auto;
+    }
+
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #FE7F9C;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active {
+      background-color: #FF0090;
+    }
+
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .row {
+      display: flex;
+      text-align: center;
+    }
+
+    .column {
+      flex: 33.33%;
+      padding: 5px;
+      border: 1px dashed #FF0090;
+    }
+
+    .horizon {
+      display: flex;
+      text-align: center;
+    }
+
+    .option {
+      border-radius: 50%;
+      padding: 1px;
+    }
+
+    .checked {
+      color: #EC0ED9;
+    }
+
+    .star {
+      text-align: center;
+    }
+
+    #gifts {
+      height: 500px;
+    }
+
+    .footer {
+      margin: 0;
+      padding: 10px;
+      border: 5px solid pink;
+      text-align: center;
+    }
+
+    .footer-links {
+      text-decoration: none;
+      color: maroon;
+      padding: 9px;
+      border: 3px solid #EC0ED9;
+      border-bottom: none;
+      border-left: none;
+      border-top: none;
+    }
+
+    .last-link {
+      text-decoration: none;
+      color: maroon;
+      padding: 9px;
+    }
+
+    .icons {
+      border: none;
+      float: left;
+    }
+
+    #ilink {
+      text-decoration: none;
+      color: maroon;
+    }
+
+    #cart-button {
+      padding: 4px;
+      font-weight: bold;
+      color: black;
+      background-color: yellow;
+      border: 2px solid black;
+      border-radius: 17px;
+    }
+  </style>
+  <title>Gift Shop</title>
+  <link rel="icon"
+    href="http://clipart-library.com/images_k/presents-transparent-background/presents-transparent-background-1.png"
+    type="image/x-icon">
+</head>
+
+<body>
+  <h2 id="slider"><img class="logo" src="images/logo.png" height="55px" width="160px">
+    <img src="images/star2.jpg" height=60px><a href="#"><img id="cart" src="images/cart.ico" style="float:right"
+        height=55px></a>
+  </h2>
+  <ul>
+    <li><a href="webpage.html">HOME</a></li>
+    <li><a href="#birthday_gifts">BIRTHDAY</a></li>
+    <li><a href="#wedding_gifts">WEDDING</a></li>
+    <li><a href="#valentin's_day_gifts">VALENTIN'S DAY</a></li>
+    <li><a href="#anniversary_gifts">ANNIVERSARY</a></li>
+  </ul>
+  <br />
+  <div class="slider">
+
+    <div class="mySlides fade">
+      <a href="#gifts">
+        <img class="slide" src="images/birthday.jpg"></a>
+    </div>
+    <div class="mySlides fade">
+      <a href="#gifts">
+        <img class="slide" src="images/valen.jpg"></a>
+    </div>
+    <a href="#gifts">
+      <div class="mySlides fade">
+        <img class="slide" src="images/roses.jpg">
+    </a>
+  </div>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+
+  <br><br>
+  <h2 style="color:#FF0090">BEST SELLING BIRTHDAY GIFTS</h2>
+  <div class="row">
+    <div class="column">
+      <img id="gifts" src="images/buquet.jpeg">
+      <figcaption>Flower Buquet</figcaption>
+      <div class="star"><span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </div>
+      <p>₹ 5,000</p><br>
+      <button id="cart-button">ADD TO CART</button>
+    </div>
+
+    <div class="column">
+      <img id="gifts" src="images/cadbory.jpeg">
+      <figcaption>Cadbory Celebration</figcaption>
+      <div class="star"><span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </div>
+      <p>₹ 3,900</p><br>
+      <button id="cart-button">ADD TO CART</button>
+    </div>
+
+    <div class="column">
+      <img id="gifts" src="images/card.jpeg">
+      <figcaption>Greeting cards</figcaption>
+      <div class="star"><span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+      </div>
+      <p>₹ 8,000</p><br>
+      <button id="cart-button">ADD TO CART</button>
+    </div>
+    <div class="column">
+      <img id="gifts" src="images/book.jpeg">
+      <figcaption>Best Books </figcaption>
+      <div class="star"><span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </div>
+      <p>₹ 6,400</p><br>
+      <button id="cart-button">ADD TO CART</button>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="column">
+      <img id="gifts" src="images/perfume.jpeg">
+      <figcaption>Perfume</figcaption>
+      <div class="star"><span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </div>
+      <p>₹ 5,000</p><br>
+      <button id="cart-button">ADD TO CART</button>
+    </div>
+
+    <div class="column">
+      <img id="gifts" src="images/purs.jpeg">
+      <figcaption>Purse</figcaption>
+      <div class="star"><span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </div>
+      <p>₹ 3,900</p><br>
+      <button id="cart-button">ADD TO CART</button>
+    </div>
+
+    <div class="column">
+      <img id="gifts" src="images/ted.jpeg">
+      <figcaption>Teddy Bear</figcaption>
+      <div class="star"><span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+      </div>
+      <p>₹ 8,000</p><br>
+      <button id="cart-button">ADD TO CART</button>
+    </div>
+    <div class="column">
+      <img id="gifts" src="images/necklace.jpeg">
+      <figcaption>Necklace </figcaption>
+      <div class="star"><span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </div>
+      <p>₹ 6,400</p><br>
+      <button id="cart-button">ADD TO CART</button>
+    </div>
+  </div>
+
+  <br><br>
+  <br><br>
+  <div class="horizon">
+    <div class="option">
+      <img id="gifts" src="images/man.jpeg" style="padding: 4px; border: 3px dashed #FF0090; border-radius: 50%"
+        width="300px">
+      <figcaption>Gifts For Men</figcaption>
+    </div>
+
+    <div class="option">
+      <img id="gifts" src="images/woman.jpeg" style="padding: 4px; border: 3px dashed #FF0090; border-radius: 50%"
+        width="300px">
+      <figcaption>Gifts For Women</figcaption>
+    </div>
+
+    <div class="option">
+      <img id="gifts" src="images/baby.jpeg" style="padding: 4px; border: 3px dashed #FF0090; border-radius: 50%"
+        width="300px">
+      <figcaption>Gifts For Baby</figcaption>
+    </div>
+
+    <div class="option">
+      <img id="gifts" src="images/kids.jpeg" style="padding: 4px; border: 3px dashed #FF0090; border-radius: 50%"
+        width="300px">
+      <figcaption>Gifts For Kids </figcaption>
+    </div>
+
+    <div class="option">
+      <img id="gifts" src="images/student.jpeg" style="padding: 4px; border: 3px dashed #FF0090; border-radius: 50%"
+        width="300px">
+      <figcaption>Gifts For Students </figcaption>
+    </div>
+  </div>
+  <br><br>
+  <br><br>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <h3><img class="logo" src="images/logo.png" height="55px" width="160px">
+        <img src="star2.jpg" height=60px><a href="#">
+      </h3>
+      <p>
+        <a href="#slider" class="footer-links">Home</a>
+        <a href="#slider" class="footer-links">Blog</a>
+        <a href="#slider" class="footer-links">Pricing</a>
+        <a href="#slider" class="footer-links">About</a>
+        <a href="#slider" class="footer-links">Faq</a>
+        <a href="#slider" class="last-link">Contact</a>
+      </p>
+      <p class="footer-company-name"> Star Gifts © 2021</p>
+      <h4>About the Company</h4>
+      <p>The Star Gifts Company was started by our founder VDI in Pune,
+        Maharashtra in 2021, from humble beginnings operating from two display bookcases
+        in a shopping centre the company has developed into an award winning business.</p><br>
+      <div class="row">
+        <div class="column icons"><a href="https://www.facebook.com/" target="_blank"><img src="images/fb1.png"
+              height="30px"></a></div>
+        <div class="column icons"><a href="https://twitter.com/" target="_blank"><img src="images/twitter.png"
+              height="30px"></a></div>
+        <div class="column icons"><a href="https://www.instagram.com/" target="_blank"><img src="images/insta.png"
+              height="30px"></a></div>
+        <div class="column icons"><a href="https://www.snapchat.com/" target="_blank"><img src="images/snap.png"
+              height="30px"></a></div>
+        <div class="column icons"><a href="https://www.reddit.com/" target="_blank"><img src="images/reddif.png"
+              height="30px"></a></div>
+        <div class="column icons"><a href="https://vimeo.com/" target="_blank"><img src="images/vimeo.png"
+              height="30px"></a></div>
+        <div class="column icons"><a href="https://www.linkedin.com/" target="_blank"><img src="images/li.png"
+              height="30px"></a></div>
+      </div>
+    </div>
+
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+</body>
+
+</html>
